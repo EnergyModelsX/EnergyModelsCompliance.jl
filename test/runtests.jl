@@ -18,4 +18,8 @@ ENV["EMX_TEST"] = true # Set flag for example scripts to check if they are run a
     @testset "Compliance - EMB access functions" begin
         include("test_emb_access_fun.jl")
     end
+
+    @testset "Compliance - EMB elements" begin
+        include("test_emb_element.jl")
+    end
 end
