@@ -1,5 +1,6 @@
 module EnergyModelsCompliance
 
-greet() = print("Hello World!")
+using TimeStruct
+using EnergyModelsBase
 
-end # module EnergyModelsCompliance
+end
