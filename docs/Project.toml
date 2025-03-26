@@ -1,0 +1,7 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+DocumenterInterLinks = "d12716ef-a0f6-4df4-a9f1-a5a34e75c656"
+EnergyModelsBase = "5d7e687e-f956-46f3-9045-6f5a5fd49f50"
+EnergyModelsCompliance = "a12c78df-351d-47be-9a81-17a33aab13b1"
+EnergyModelsGeography = "3f775d88-a4da-46c4-a2cc-aa9f16db6708"
+TimeStruct = "f9ed5ce0-9f41-4eaa-96da-f38ab8df101c"

@@ -1,0 +1,1 @@
+# [Philosophy](@id man-phil)
