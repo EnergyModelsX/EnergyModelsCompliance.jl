@@ -39,4 +39,8 @@ ENV["EMX_TEST"] = true # Set flag for example scripts to check if they are run a
     @testset "Compliance - EMG elements" begin
         include("test_emg_element.jl")
     end
+
+    @testset "Compliance - EMG test cases" begin
+        include("test_emg_mwe.jl")
+    end
 end
