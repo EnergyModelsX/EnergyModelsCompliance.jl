@@ -4,9 +4,9 @@
 
 Initial version of the package:
 
-* Inclusion of compliance checks for new `Node`s and `Link`s
+* Inclusion of compliance checks for new `Node`s, `Link`s, `Area`s, and `TransmissionMode`s:
   * Checks highlight whether a `Node` or `Link` can work with existing functions or have a new method.
-  * Checks mostly provide warnings, as errors are dependent on the chosen functions from `EnergyModelsBase`
+  * Checks mostly provide warnings, as errors are dependent on the chosen functions from `EnergyModelsBase` or `EnergyModelsGeography`.
 
 * Inclusion of simple test case for `Node`
   * Test case can be used to see whether the couplings in `EnergyModelsBase` are working.

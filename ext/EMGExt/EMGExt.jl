@@ -14,5 +14,6 @@ const EMC = EnergyModelsCompliance
 const TS = TimeStruct
 
 include("compliance_access_fun.jl")
+include("compliance_ele.jl")
 
 end
