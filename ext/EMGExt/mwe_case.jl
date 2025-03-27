@@ -3,7 +3,8 @@
     EMC.test_case(tm::TransmissionMode, 𝒯::TimeStructure, warn_log; co2::ResourceEmit = ResourceEmit("CO₂", 1.0))
 
 Default testset which tests that the developed [`TransmissionMode`](@extref EnergyModelsGeography.TransmissionMode)
-`tm` can be included in an `EnergyModelsGeography` model that solves.
+`tm` can be included in an `EnergyModelsGeography` model, and that the resulting model is
+solvable.
 
 The testset automatically identifies a minimum working case for the given transmission mode
 structure. The minimum working example includes 2 areas that are only connected by the given
@@ -22,7 +23,7 @@ The following default values are chosen:
 - **`𝒯::TimeStructure`** is the chosen time structure. It should only contain a single
   strategic period.
 - **`warn_log`** is the warning `NamedTuple` obtained through calling the function
-  `acccess_functionality`.
+  `compliance_element`.
 
 # Tests
 - The optimization problems leads to an optimal solution.

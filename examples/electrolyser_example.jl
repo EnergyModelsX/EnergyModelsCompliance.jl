@@ -23,7 +23,7 @@ ng = ResourceCarrier("NG", 0.2)
 h2 = ResourceCarrier("H₂", 0.0)
 co2 = ResourceEmit("CO₂", 1.0)
 
-# Create an instance of thew newly developed node
+# Create an instance of the newly developed node
 node = Reformer(
     "reformer",             # Node id
     FixedProfile(50),       # Installed capacity in MW
@@ -64,5 +64,5 @@ err_log, warn_log = compliance_element(node)
 𝒯 = TwoLevel(1, 1, SimpleTimes(10,1))
 
 # Create and run the test case. co2 must be specified as we utilize it within the node for
-# the emissions
+# the emissions.
 test_case(node, 𝒯, warn_log; co2);

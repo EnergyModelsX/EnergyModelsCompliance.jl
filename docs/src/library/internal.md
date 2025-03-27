@@ -1,9 +1,9 @@
-# [Types](@id lib-int)
+# [Internal library](@id lib-int)
 
 ## [Index](@id lib-int-idx)
 
 ```@index
-Pages = ["types.md"]
+Pages = ["internal.md"]
 ```
 
 ## [`Node`s and `Link`s](@id lib-int-node_link)

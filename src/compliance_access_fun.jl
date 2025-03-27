@@ -174,7 +174,7 @@ compliance_opex_fixed(n::Sink) = false
 """
     compliance_inputs(n::EMB.Node)
 
-Returns a `Tuple{Bool}`` indicating whether the function
+Returns a `Tuple{Bool}` indicating whether the function
 [`inputs`](@extref EnergyModelsBase.inputs) is applicable for the developed
 [`Node`](@extref EnergyModelsBase.Node).
 
@@ -221,7 +221,7 @@ end
 """
     compliance_outputs(n::EMB.Node)
 
-Returns a `Tuple{Bool}`` indicating whether the function
+Returns a `Tuple{Bool}` indicating whether the function
 [`outputs`](@extref EnergyModelsBase.outputs) is applicable for the developed
 [`Node`](@extref EnergyModelsBase.Node).
 

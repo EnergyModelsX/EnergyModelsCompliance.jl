@@ -10,7 +10,7 @@ Pkg.instantiate()
 # of the resources and time profile, while EnergyModelsCompliance is required for the core
 # functionality.
 # EnergyModelsGeography is furthermore required to load the extension for testing
-# TransmissionModes
+# TransmissionModes.
 using TimeStruct
 using EnergyModelsBase
 using EnergyModelsCompliance
@@ -25,7 +25,7 @@ h2_hp = ResourceCarrier("H₂ʰᵖ", 0.0)
 h2_lp = ResourceCarrier("H₂ˡᵖ", 0.0)
 co2 = ResourceEmit("CO₂", 1.0)
 
-# Create an instance of thew newly developed tranmission mode
+# Create an instance of the newly developed tranmission mode
 tm = PipeLinepackSimple(
     "pipeline",         # Transmission mode id
     h2_hp,              # Input to the transmisison mode
@@ -36,14 +36,15 @@ tm = PipeLinepackSimple(
     FixedProfile(0.01), # Loss as fraction
     FixedProfile(0.1),  # Variable OPEX in €/MWh
     FixedProfile(1.0),  # Fixed OPEX in €/MW/a
-    0.1,                # Storage capacity as a fraction of the transmission capacity in MWh/Mw
+    0.1,                # Storage capacity as a fraction of the transmission capacity in MWh/MW
 )
 
 ############################################################################################
 # Step 2: Identify whether the new node satisfy the existing access functions
 
 # When you look at the values of both err_log and warn_log, you see that all values are
-# false, indicating that the new node is in compliance with `EnergyModelsBase`
+# false, indicating that the new node is in compliance with `EnergyModelsBase` and
+# `EnergyModelsGeography`
 err_log, warn_log = compliance_element(tm)
 
 ############################################################################################
@@ -55,5 +56,5 @@ err_log, warn_log = compliance_element(tm)
 𝒯 = TwoLevel(1, 1, SimpleTimes(10,1))
 
 # Create and run the test case. co2 must not be specified (but can) as we do not utilize it
-# within the transmission mode for the emissions
+# within the transmission mode for the emissions.
 test_case(tm, 𝒯, warn_log; co2);

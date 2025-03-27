@@ -52,7 +52,7 @@ There are however a few important caveats when using the function for `Node`s.
 !!! warning "Rigorous testing"
     The developed function should only be used for identifying major problems with new elements.
     It does **not** provide a rigerous test for the new element.
-    This is especially relevant for the mathematical formulation, as we cannot include automated tests for unknown mathematical formulation.
+    This is especially relevant for the mathematical formulation, as we cannot include automated tests for unknown mathematical formulations.
     It is hence necessary that you test your element further with changes in the input representing your specific element.
 
 ## [Examples](@id man-use-examples)

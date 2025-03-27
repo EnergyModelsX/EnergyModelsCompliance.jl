@@ -8,7 +8,6 @@
     EMG.availability_node(a::TestArea) =
         GeoAvailability("avail", Resource[ResourceCarrier("test", 0.0)])
     err_log, warn_log = EMC.compliance_element(area)
-    println(err_log)
     @test all(err_log == (availability=false,))
     @test isempty(warn_log)
     Base.delete_method(@which availability_node(area))
@@ -43,7 +42,6 @@ end
     EMG.consumption_rate(tm::TestPipe) = FixedProfile(0.1)
     EMG.consumption_rate(tm::TestPipe, t) = 0.1
     err_log, warn_log = EMC.compliance_element(pipe)
-    println(err_log)
     @test all(err_log == (inputs=true, outputs=true, bidirectional=false))
     @test all(
         warn_log == (capacity=true, opex_var=true, opex_fixed=true,
