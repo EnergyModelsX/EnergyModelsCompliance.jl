@@ -53,7 +53,6 @@ makedocs(
         ],
     ],
     plugins = [links],
-    remotes = nothing,
 )
 
 deploydocs(;
