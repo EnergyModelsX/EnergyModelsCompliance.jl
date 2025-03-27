@@ -3,7 +3,7 @@
     compliance_element(n::Storage)
     compliance_element(l::Link)
 
-Returns two `NamedTuple`s corresponding to the 1. errors and 2. warnings of the testing of
+Returns two `NamedTuple`s corresponding to respectively the errors and warnings of the testing of
 the indivdiual test functions. The called test functions are dependent on the chosen type:
 
 !!! note "Node"

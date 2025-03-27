@@ -44,7 +44,7 @@ makedocs(
         "Home" => "index.md",
         "Manual" => Any[
             "Quick Start"=>"manual/quick-start.md",
-            "How-to-use"=>"manual/use.md",
+            "How to use"=>"manual/use.md",
             "Release notes"=>"manual/NEWS.md",
         ],
         "Library" => Any[

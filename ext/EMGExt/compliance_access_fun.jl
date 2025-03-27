@@ -3,7 +3,7 @@
 
 Returns a `Bool` indicating whether the function
 [`availability_node`](@extref EnergyModelsGeography.availability_node) is applicable for the
-developed [`Area`].(@extref EnergyModelsGeography.Area)
+developed [`Area`](@extref EnergyModelsGeography.Area).
 """
 function compliance_area_availability(a::Area)
     err_b = false
@@ -276,7 +276,7 @@ Returns a `Bool` indicating whether the function
 [`is_bidirectional`](@extref EnergyModelsGeography.is_bidirectional) is applicable for the
 developed [`TransmissionMode`](@extref EnergyModelsGeography.TransmissionMode).
 
-It is not required, if you create a new [`PipeMode`](@extref EnergyModelsGeography.PipeMode).
+It is not required if you create a new [`PipeMode`](@extref EnergyModelsGeography.PipeMode).
 """
 function compliance_bidirectional(tm::TransmissionMode)
     err_b = false
@@ -301,7 +301,7 @@ Returns a `Bool` indicating whether the function
 [`consumption_rate`](@extref EnergyModelsGeography.consumption_rate) is applicable for the
 developed [`TransmissionMode`](@extref EnergyModelsGeography.TransmissionMode).
 
-It is only required, if you create a new [`PipeMode`](@extref EnergyModelsGeography.PipeMode).
+It is only required if you create a new [`PipeMode`](@extref EnergyModelsGeography.PipeMode).
 
 The function checks both `consumption_rate(tm)` and `consumption_rate(tm, t)` even if
 the former is not directly used.
