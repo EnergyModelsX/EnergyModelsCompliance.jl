@@ -1,5 +1,9 @@
 # Release notes
 
+## Unversioned
+
+* Minor updates to `README.md` and the documentation.
+
 ## Version 0.1.0 (2025-03-27)
 
 Initial version of the package:

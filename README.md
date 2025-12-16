@@ -14,14 +14,6 @@ While it can be used as a first step for checking new elements, thorough tests o
 The usage of the package is best illustrated through the commented [`examples`](examples).
 The examples showcase how the functions from `EnergyModelsCompliance` can be utilized to identify whether your newly developed element can be incorporated in `EnergyModelsBase` or `EnergyModelsGeography` models.
 
-> [!WARNING]
-> The package is not yet registered.
-> It is hence necessary to first clone the package and manually add the package to the example environment through:
->
-> ```julia
-> ] dev ..
-> ```
-
 ## Cite
 
 If you find `EnergyModelsCompliance` useful in your work, we kindly request that you cite the following [publication](https://doi.org/10.21105/joss.06619):
