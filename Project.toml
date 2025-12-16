@@ -1,7 +1,7 @@
 name = "EnergyModelsCompliance"
 uuid = "a12c78df-351d-47be-9a81-17a33aab13b1"
 authors = ["Julian Straus <Julian.Straus@sintef.no>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 EnergyModelsBase = "5d7e687e-f956-46f3-9045-6f5a5fd49f50"

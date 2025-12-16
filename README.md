@@ -14,6 +14,10 @@ While it can be used as a first step for checking new elements, thorough tests o
 The usage of the package is best illustrated through the commented [`examples`](examples).
 The examples showcase how the functions from `EnergyModelsCompliance` can be utilized to identify whether your newly developed element can be incorporated in `EnergyModelsBase` or `EnergyModelsGeography` models.
 
+> [!IMPORTANT]
+> The reimplementation of the `ExtensionData` in [`EnergyModelsBase` v0.9.1](https://github.com/EnergyModelsX/EnergyModelsBase.jl/releases/tag/v0.9.1) and the corresponding adjustment in [`EnergyModelsGeography` v0.11.3](https://github.com/EnergyModelsX/EnergyModelsGeography.jl/releases/tag/v0.11.3) resulted in problems for checking the function `mode_data`.
+> The check is hence deactivated while we consider how to do properly assess it in `EnergyModelsBase` and `EnergyModelsGeography`.
+
 ## Cite
 
 If you find `EnergyModelsCompliance` useful in your work, we kindly request that you cite the following [publication](https://doi.org/10.21105/joss.06619):

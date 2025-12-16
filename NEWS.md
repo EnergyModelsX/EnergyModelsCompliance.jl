@@ -1,8 +1,9 @@
 # Release notes
 
-## Unversioned
+## Version 0.1.1 (2025-12-16)
 
 * Minor updates to `README.md` and the documentation.
+* Removal of data compliance of `TransmissionMode` due to the changes from [`EnergyModelsBase` v0.9.1](https://github.com/EnergyModelsX/EnergyModelsBase.jl/releases/tag/v0.9.1) and the corresponding adjustment in [`EnergyModelsGeography` v0.11.3](https://github.com/EnergyModelsX/EnergyModelsGeography.jl/releases/tag/v0.11.3).
 
 ## Version 0.1.0 (2025-03-27)
 
