@@ -21,7 +21,7 @@ the indivdiual test functions. The called test functions are dependent on the ch
     - [`compliance_bidirectional`](@ref).
 
     !!! warning
-        [`EMC.compliance_data`](@ref) is in the current stage removed as changes to the
+        [`EMC.compliance_data`](@ref) is in the current stage removed due to changes to the
         handling of `ExtensionData`.
 
 !!! note "Areas"

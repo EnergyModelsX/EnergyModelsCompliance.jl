@@ -26,7 +26,7 @@ In this case, the model would not construct.
 However, if a developer provide new methods for their developed node, it is possible to ignore the warnings.
 An example is given by the function [`opex_fixed`](@extref EnergyModelsBase.opex_fixed).
 This function is only called in the function [`constraints_opex_fixed`](@extref EnergyModelsBase.constraints_opex_fixed).
-Hence, if you do not use the function, you can ignore the warning
+Hence, if you do not use the function, you can ignore the warning.
 
 ### [Test case](@id man-use-concepts-test)
 
@@ -65,7 +65,7 @@ There are however a few important caveats when using the function for `Node`s.
 
 !!! warning "Rigorous testing"
     The developed function should only be used for identifying major problems with new elements.
-    It does **not** provide a rigerous test for the new element.
+    It does **not** provide a rigorous test for the new element.
     This is especially relevant for the mathematical formulation, as we cannot include automated tests for unknown mathematical formulations.
     It is hence necessary that you test your element further with changes in the input representing your specific element.
 
