@@ -102,13 +102,13 @@ end
     disable_logging(Error), (@test EMC.compliance_outputs(mode)[1]), disable_logging(Debug)
     Base.delete_method(@which outputs(mode))
 
-    # Test the data warning
-    msg = "The function `mode_data(tm)` is not working for the mode type `TestMode`.\n" *
-        "If you do not use the default functions `create_mode` and `investment_data` " *
-        "(when using `EnergyModelsInvestments`),\n" *
-        "you can ignore this warning."
-    @test_logs (:warn, msg) EMC.compliance_data(mode)
-    disable_logging(Warn), (@test EMC.compliance_data(mode)), disable_logging(Debug)
+    # # Test the data warning
+    # msg = "The function `mode_data(tm)` is not working for the mode type `TestMode`.\n" *
+    #     "If you do not use the default functions `create_mode` and `investment_data` " *
+    #     "(when using `EnergyModelsInvestments`),\n" *
+    #     "you can ignore this warning."
+    # @test_logs (:warn, msg) EMC.compliance_data(mode)
+    # disable_logging(Warn), (@test EMC.compliance_data(mode)), disable_logging(Debug)
 
     # Test the loss warnings
     msg = "The function `loss(tm)` is not working for the mode type " *

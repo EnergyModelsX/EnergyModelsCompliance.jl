@@ -21,7 +21,7 @@ end
     @test all(err_log == (inputs=true, outputs=true, bidirectional=true))
     @test all(
         warn_log == (capacity=true, opex_var=true, opex_fixed=true,
-            inputs=false, outputs=false, loss=true, consumption_rate=false, data=true)
+            inputs=false, outputs=false, loss=true, consumption_rate=false, data=false)
     )
     EMB.outputs(tm::TestMode) = [ResourceCarrier("test", 0.0)]
     EMG.loss(tm::TestMode) = FixedProfile(10)
@@ -30,7 +30,7 @@ end
     @test all(err_log == (inputs=true, outputs=false, bidirectional=true))
     @test all(
         warn_log == (capacity=true, opex_var=true, opex_fixed=true,
-            inputs=false, outputs=false, loss=false, consumption_rate=false, data=true)
+            inputs=false, outputs=false, loss=false, consumption_rate=false, data=false)
     )
     Base.delete_method(@which outputs(mode))
     Base.delete_method(@which loss(mode))

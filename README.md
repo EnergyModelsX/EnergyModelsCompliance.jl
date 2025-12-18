@@ -14,13 +14,9 @@ While it can be used as a first step for checking new elements, thorough tests o
 The usage of the package is best illustrated through the commented [`examples`](examples).
 The examples showcase how the functions from `EnergyModelsCompliance` can be utilized to identify whether your newly developed element can be incorporated in `EnergyModelsBase` or `EnergyModelsGeography` models.
 
-> [!WARNING]
-> The package is not yet registered.
-> It is hence necessary to first clone the package and manually add the package to the example environment through:
->
-> ```julia
-> ] dev ..
-> ```
+> [!IMPORTANT]
+> The reimplementation of the `ExtensionData` in [`EnergyModelsBase` v0.9.1](https://github.com/EnergyModelsX/EnergyModelsBase.jl/releases/tag/v0.9.1) and the corresponding adjustment in [`EnergyModelsGeography` v0.11.3](https://github.com/EnergyModelsX/EnergyModelsGeography.jl/releases/tag/v0.11.3) resulted in problems for checking the function `mode_data`.
+> The check is hence deactivated while we consider how to do properly assess it in `EnergyModelsBase` and `EnergyModelsGeography`.
 
 ## Cite
 

@@ -20,6 +20,10 @@ the indivdiual test functions. The called test functions are dependent on the ch
     - [`compliance_con_rate`](@ref) for [`PipeMode`](@extref EnergyModelsGeography.PipeMode), and
     - [`compliance_bidirectional`](@ref).
 
+    !!! warning
+        [`EMC.compliance_data`](@ref) is in the current stage removed due to changes to the
+        handling of `ExtensionData`.
+
 !!! note "Areas"
     The following function is called:
 
@@ -36,7 +40,8 @@ function EMC.compliance_element(tm::TransmissionMode)
     warn_opex_fixed = has_opex(tm) ? EMC.compliance_opex_fixed(tm) : false
     err_in, warn_in = EMC.compliance_inputs(tm)
     err_out, warn_out = EMC.compliance_outputs(tm)
-    warn_data = EMC.compliance_data(tm)
+    # warn_data = EMC.compliance_data(tm)
+    warn_data = false
 
     warn_loss = compliance_loss(tm)
     warn_con_rate = compliance_con_rate(tm)

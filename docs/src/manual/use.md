@@ -26,7 +26,7 @@ In this case, the model would not construct.
 However, if a developer provide new methods for their developed node, it is possible to ignore the warnings.
 An example is given by the function [`opex_fixed`](@extref EnergyModelsBase.opex_fixed).
 This function is only called in the function [`constraints_opex_fixed`](@extref EnergyModelsBase.constraints_opex_fixed).
-Hence, if you do not use the function, you can ignore the warning
+Hence, if you do not use the function, you can ignore the warning.
 
 ### [Test case](@id man-use-concepts-test)
 
@@ -36,6 +36,20 @@ It should be used for identifying whether the developed element results in a tri
 
 The function creates a minimum working example given an instance of the element, a simple time structure, and the `warn_log` from the function [`compliance_element`](@ref).
 It then tests whether the new element is utilized.
+
+!!! note "Tested values"
+    The utilization is tested by the variable `:cap_use` of the connected `Node`s and a corresponding utilization value of the new `Node` or `TransmissionMode`.
+    It must be above 0.1 in at least one of the time periods for all connected `Node`s.
+    The tests for the node itself are:
+    - `:cap_use` of the developed `Node` is larger than 0.1 at least once.
+    - `:stor_level` of the developed `Storage` is larger than 0.1 at least once.
+      `:stor_charge_use` an/or `stor_discharge_use` must also be above 0.1 at least once depending on whether the `Storage` node has input or output.
+    - `:trans_in` and `:trans_out` of the developed `TransmissionMode` is larger than 0.1 at least once.
+
+    You must adjust your test case that they are working with these test values.
+
+    This is also explained in the respective docstrings [`test_case(n::Source, 𝒯::TimeStructure, warn; co2::ResourceEmit = ResourceEmit("CO₂", 1.0))`](@ref) and [`test_case(tm::TransmissionMode, 𝒯::TimeStructure, warn; co2::ResourceEmit = ResourceEmit("CO₂", 1.0))`](@ref).
+.
 
 There are however a few important caveats when using the function for `Node`s.
 
@@ -51,7 +65,7 @@ There are however a few important caveats when using the function for `Node`s.
 
 !!! warning "Rigorous testing"
     The developed function should only be used for identifying major problems with new elements.
-    It does **not** provide a rigerous test for the new element.
+    It does **not** provide a rigorous test for the new element.
     This is especially relevant for the mathematical formulation, as we cannot include automated tests for unknown mathematical formulations.
     It is hence necessary that you test your element further with changes in the input representing your specific element.
 

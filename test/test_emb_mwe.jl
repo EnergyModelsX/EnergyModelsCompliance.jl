@@ -35,7 +35,7 @@ end
         Dict(power => 1, co2 => 1), # Output from the node with output ratio
         # Line above: co2 is required as output for variable definition, but the
         # value does not matter
-        [CaptureEnergyEmissions(0.9)],  # Additonal data for emissions and CO₂ capture
+        [CaptureEnergyEmissions(0.9)],  # Additional data for emissions and CO₂ capture
     )
     err_log, warn_log = compliance_element(node);
     𝒯 = TwoLevel(1,1,SimpleTimes(10,1))
