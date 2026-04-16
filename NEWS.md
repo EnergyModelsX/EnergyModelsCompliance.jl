@@ -1,5 +1,12 @@
 # Release notes
 
+## Version 0.2.0 (2026-04-16)
+
+* Adjusted to [`EnergyModelsBase` v0.10.0](https://github.com/EnergyModelsX/EnergyModelsBase.jl/releases/tag/v0.10.0) and [`EnergyModelsGeography` v0.10.0](https://github.com/EnergyModelsX/EnergyModelsGeography.jl/releases/tag/v0.12.0):
+* Model worked without adjustments.
+* Breaking change still included to maintain the possibility to do bug fixes in version 0.1.x for existing models with `EnergyModelsBase` v0.9.x.
+* Updated CI versions.
+
 ## Version 0.1.1 (2025-12-16)
 
 * Minor updates to `README.md` and the documentation.
